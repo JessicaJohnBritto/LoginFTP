@@ -382,7 +382,7 @@ form.sign-in-form {
     display: none;
   }
   .panel .content {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
   }
   .container {
     padding: 1.5rem;
