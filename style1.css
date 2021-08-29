@@ -437,10 +437,14 @@ span#basic-addon2 {
   color: #495057;
   text-align: center;
   white-space: nowrap;
-  border: none;
-  border-radius: 10rem;
-  padding-top: 0px;
-  background-color: #f0f1f3;
+  border-color: rgb(0 0 0 / 90%);
+  border-bottom-left-radius: 0;
+    border-style: double;
+    border-width: 0 0 0 2px;
+    background-color: #f0f1f3;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
 
 select.form-group {
