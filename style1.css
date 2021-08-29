@@ -440,6 +440,7 @@ span#basic-addon2 {
   border: none;
   border-radius: 10rem;
   padding-top: 0px;
+  background-color: #f0f1f3;
 }
 
 select.form-group {
