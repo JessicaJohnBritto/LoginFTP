@@ -437,15 +437,13 @@ span#basic-addon2 {
   color: #495057;
   text-align: center;
   white-space: nowrap;
-  border-color: rgb(0 0 0 / 90%);
+ border: none;
   border-bottom-left-radius: 0;
-    border-style: double;
-    border-width: 0 0 0 2px;
+    padding-top: 0px;
     background-color: #f0f1f3;
     border-top-left-radius: 0;
     border-bottom-right-radius: 2rem;
     border-top-right-radius: 2rem;
-}
 
 select.form-group {
     text-align-last: right;
