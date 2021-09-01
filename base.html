@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="shortcut icon" type="image/icon" href="{% static 'ftp/login/logo.png' %}"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+      <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"
+      ></script>
+      <title>{% block title %}{% endblock %}</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="{%static 'ftp/login/login.css' %}">
+   <body>
+      <div class="container">
+    
+         
+               <!-- Form Box -->
+               {% block content %}
+               {% endblock %}
+           
+      </div>
+      <div class="links">
+         <ul class="link-list">
+            <li class="fb"><a href="https://www.facebook.com/IRCIITKGP/?ref=page_internal" target="none" class="fa fa-facebook-square"></a></li>
+            <li class="mail"><a href="mailto:ftp.ircell@gmail.com" title="Mail ID IR Cell" class="fa fa-envelope"></a></li>
+            <li class="linked"><a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur" target="none" class="fa fa-linkedin-square"></a></li>
+         </ul>
+      </div>
+      <script src="{%static 'ftp/login/login.js' %}"></script>
+   </body>
+   </head>
+</html>
