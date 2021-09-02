@@ -17,21 +17,40 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="{%static 'ftp/login/login.css' %}">
    <body>
-      <div class="container">
+       <div class="container1">
+          <div class="forms-container">
     
          
                <!-- Form Box -->
                {% block content %}
                {% endblock %}
            
+         </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content" style="padding-top: 0px;">
+              <div class="imagee"><img id="imagee" src="{% static 'ftp/login/logo.png' %}"></div>
+            <h3>FOREIGN TRAINING PROGRAM</h3>
+            <p style="
+    margin-bottom: 0px;
+">2021-2022</p>
+            {% block register %}
+                  {% endblock %}
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <div class="imagee"><img id="imagee" src="{% static 'ftp/login/logo.png' %}"></div>
+            <h3>FOREIGN TRAINING PROGRAM</h3>
+            <p style="
+    margin-bottom: 0px;
+">2021-2022</p>
+            {% block login %}
+                  {% endblock %}
+          </div>
+        </div>
       </div>
-      <div class="links">
-         <ul class="link-list">
-            <li class="fb"><a href="https://www.facebook.com/IRCIITKGP/?ref=page_internal" target="none" class="fa fa-facebook-square"></a></li>
-            <li class="mail"><a href="mailto:ftp.ircell@gmail.com" title="Mail ID IR Cell" class="fa fa-envelope"></a></li>
-            <li class="linked"><a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur" target="none" class="fa fa-linkedin-square"></a></li>
-         </ul>
-      </div>
+    </div>
       <script src="{%static 'ftp/login/login.js' %}"></script>
    </body>
    </head>
