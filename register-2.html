@@ -8,11 +8,13 @@
 <div class="container1 sign-up-mode">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form class="sign-in-form" action="{% url 'ftp:login_user' %}" method="POST">
+          {% csrf_token %}
+            
             <h2 class="title">Sign in</h2>
             <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-              <input type="text" placeholder="Email Address" />
+              <input type="text" name="email" placeholder="Email Address" />
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">
                     <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
@@ -24,7 +26,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Connect with us!</p>
@@ -41,11 +43,13 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
+          <form class="sign-up-form" action="{% url 'ftp:register' %}" method="POST">
+          {% csrf_token %}
+            
             <h2 class="title">Sign up</h2>
             <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-              <input type="text" placeholder="Email Address" />
+              <input type="text" name="username" placeholder="Email Address" />
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">
                     <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
@@ -59,12 +63,12 @@
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password1" placeholder="Password" />
             </div>
 
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Confirm password" />
+              <input type="password" name="password2" placeholder="Confirm password" />
             </div>
 
             <input type="submit" class="btn" value="Register" />
@@ -88,7 +92,7 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content" style="padding-top: 0px;">
-              <div class="imagee"><img id="imagee" src="{%static 'ftp/login/login.css' %}"></div>
+              <div class="imagee"><img id="imagee" src="{%static 'ftp/login/logo.png' %}"></div>
             <h3>FOREIGN TRAINING PROGRAM</h3>
             <p style="
     margin-bottom: 0px;
@@ -100,7 +104,7 @@
         </div>
         <div class="panel right-panel">
           <div class="content">
-            <div class="imagee"><img id="imagee" src="{%static 'ftp/login/login.css' %}"></div>
+            <div class="imagee"><img id="imagee" src="{%static 'ftp/login/logo.png' %}"></div>
             <h3>FOREIGN TRAINING PROGRAM</h3>
             <p style="
     margin-bottom: 0px;
