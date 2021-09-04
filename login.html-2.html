@@ -3,89 +3,115 @@
 
 {% block title %}Login | FTP | International Relations Cell{% endblock %}
 
-{% block login %}
-    <!-- Added switch button here-->
-    <button class="btn transparent" id="sign-in-btn">
+
+{% block content %}
+<div class="container1">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input type="text" placeholder="Email Address" />
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">
+                    <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
+                        <option value="@iitkgp.ac.in" selected>@iitkgp.ac.in</option>
+                        <option value="@kgpian.iitkgp.ac.in">@kgpian.iitkgp.ac.in</option>
+                    </select>
+                </span>
+             </div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Connect with us!</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/IRCIITKGP/" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              
+              <a href="mailto:ftp.ircell@gmail.com" class="social-icon">
+                <i class="material-icons">email</i>
+              </a>
+              <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <input type="text" placeholder="Email Address" />
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">
+                    <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
+                        <option value="@iitkgp.ac.in" selected>@iitkgp.ac.in</option>
+                        <option value="@kgpian.iitkgp.ac.in">@kgpian.iitkgp.ac.in</option>
+                    </select>
+                </span>
+             </div>
+            </div>
+            
+            
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirm password" />
+            </div>
+
+            <input type="submit" class="btn" value="Register" />
+            <p class="social-text">Connect with us!</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/IRCIITKGP/" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              
+              <a href="mailto:ftp.ircell@gmail.com" class="social-icon">
+                <i class="material-icons">email</i>
+              </a>
+              <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content" style="padding-top: 0px;">
+              <div class="imagee"><img id="imagee" src="{%static 'ftp/login/login.css' %}"></div>
+            <h3>FOREIGN TRAINING PROGRAM</h3>
+            <p style="
+    margin-bottom: 0px;
+">2021-2022</p>
+            <button class="btn transparent" id="sign-up-btn">
+              Register
+            </button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <div class="imagee"><img id="imagee" src="{%static 'ftp/login/login.css' %}"></div>
+            <h3>FOREIGN TRAINING PROGRAM</h3>
+            <p style="
+    margin-bottom: 0px;
+">2021-2022</p>
+            <button class="btn transparent" id="sign-in-btn">
                LOGIN
             </button>
-{% endblock %}
-{% block content %}
-<div class="signin-signup">
-    <form action="#" class="sign-in-form">
-      <h2 class="title">Sign in</h2>
-      <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <input type="text" placeholder="Email Address" />
-        <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">
-              <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
-                  <option value="@iitkgp.ac.in" selected>@iitkgp.ac.in</option>
-                  <option value="@kgpian.iitkgp.ac.in">@kgpian.iitkgp.ac.in</option>
-              </select>
-          </span>
-       </div>
+          </div>
+        </div>
       </div>
-      <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" />
-      </div>
-      <input type="submit" value="Login" class="btn solid" />
-      <p class="social-text">Connect with us!</p>
-      <div class="social-media">
-        <a href="https://www.facebook.com/IRCIITKGP/" class="social-icon">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        
-        <a href="mailto:ftp.ircell@gmail.com" class="social-icon">
-          <i class="material-icons">email</i>
-        </a>
-        <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" class="social-icon">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-    </form>
-    <form action="#" class="sign-up-form">
-      <h2 class="title">Sign up</h2>
-      <div class="input-field" style="grid-template-columns: 15% 37% 5%;">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <input type="text" placeholder="Email Address" />
-        <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">
-              <select name="domain" class="form-group" style="margin-bottom:0;width: 9.5rem;font-size: 0.75rem;background-color: #f0f0f0;border: none;text-align-last: right;">
-                  <option value="@iitkgp.ac.in" selected>@iitkgp.ac.in</option>
-                  <option value="@kgpian.iitkgp.ac.in">@kgpian.iitkgp.ac.in</option>
-              </select>
-          </span>
-       </div>
-      </div>
-      
-      
-      <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" />
-      </div>
+    </div>
 
-      <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Confirm password" />
-      </div>
-
-      <input type="submit" class="btn" value="Register" />
-      <p class="social-text">Connect with us!</p>
-      <div class="social-media">
-        <a href="https://www.facebook.com/IRCIITKGP/" class="social-icon">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        
-        <a href="mailto:ftp.ircell@gmail.com" class="social-icon">
-          <i class="material-icons">email</i>
-        </a>
-        <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" class="social-icon">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-    </form>
-  </div>
-</div>
 
 {% endblock %}
