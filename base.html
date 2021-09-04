@@ -17,40 +17,14 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="{%static 'ftp/login/login.css' %}">
    <body>
-       <div class="container1">
-          <div class="forms-container">
+       
     
          
                <!-- Form Box -->
                {% block content %}
                {% endblock %}
            
-         </div>
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content" style="padding-top: 0px;">
-              <div class="imagee"><img id="imagee" src="{% static 'ftp/login/logo.png' %}"></div>
-            <h3>FOREIGN TRAINING PROGRAM</h3>
-            <p style="
-    margin-bottom: 0px;
-">2021-2022</p>
-            {% block register %}
-                  {% endblock %}
-          </div>
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <div class="imagee"><img id="imagee" src="{% static 'ftp/login/logo.png' %}"></div>
-            <h3>FOREIGN TRAINING PROGRAM</h3>
-            <p style="
-    margin-bottom: 0px;
-">2021-2022</p>
-            {% block login %}
-                  {% endblock %}
-          </div>
-        </div>
-      </div>
-    </div>
+         
       <script src="{%static 'ftp/login/login.js' %}"></script>
    </body>
    </head>
