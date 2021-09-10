@@ -1,58 +1,59 @@
-{% extends 'ftp/base.html' %}
+{% extends 'ftp/login/base.html' %}
 {% load staticfiles %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'ftp/profil/assets/img/apple-icon.png' %}" />
-
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <!-- CSS Files -->
-    <link href="{% static 'ftp/profil/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'ftp/profil/assets/css/paper-bootstrap-wizard.css' %}" rel="stylesheet" />
-
-     <!-- Fonts and Icons -->
-     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-     <link href="{% static 'ftp/profil/assets/css/themify-icons.css' %}" rel="stylesheet">
- 
 
 {% block title %}Login | FTP | International Relations Cell{% endblock %}
-</head>
 
-{% block main %}
-<main>
-    <style>
-        .set{
-            padding-top:120px;
-            padding-bottom:120px;
-        }
-    </style>
-    <center>
-    <section class="set">
-        <div class="col-sm-6 form">
-            <div class="login form-peice">
-                <form class="login-form" style="text-align: center; color: black;">
-                    <h3 style="text-align: center;margin-bottom:30px;color: #4a4e3f;">Activate your account</h3>
-                    <div style="border: thin solid black; padding: 20px 10px; border-radius: 20px;">
+{% block content %}
+        <div class="container1">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form class="sign-in-form" action="{% url 'ftp:login_user' %}" method="POST">
+            
+            
+            <h3 style="text-align: center;margin-bottom:30px;color: ##5995fd;">Activate your account</h3>
+                    <div>
                         Activation link has been sent to <strong>{{ email }}</strong>
                         <br><br>
-                        Login and activate though <a href="https://iitkgpmail.iitkgp.ac.in"><strong style="color:blue;">iitkgpmail.iitkgp.ac.in</strong></a>
+                        Login and activate through <a href="https://iitkgpmail.iitkgp.ac.in"><strong>iitkgpmail.iitkgp.ac.in</strong></a>
                         <br><br>
-                        To reset your Zimbra password, please mail to <a href="mailto:helpdesk@cc.iitkgp.ac.in"><strong style="color:blue;"> helpdesk@cc.iitkgp.ac.in</strong></a>
+                        To reset your Zimbra password, please mail to <a href="mailto:helpdesk@cc.iitkgp.ac.in"><strong>helpdesk@cc.iitkgp.ac.in</strong></a>
                     </div>
-                    <div class="CTA row" style="align-content: center; justify-content: center;">
-                       <div class="col-sm"> <button class="ctainput btn btn-primary btn-sm" type="button" style="    margin-top: 2rem;
-                        background-image: linear-gradient( 192deg,#2a4ba5,#000000 100%); " onClick="window.location.href='{% url 'ftp:login_user' %}';">Login here</button> </div>
-                     <div class=col-sm>   <button class="ctainput btn btn-primary btn-sm" style="background-color: rgb(85, 240, 85); margin-top:2rem; background-image: linear-gradient( 
-                        192deg,#2a4ba5,#000000 100%);" type="button" onClick="window.location.href='{% url 'ftp:resend_activation' user_id %}';">Resend link</button> </div>
+            
+                         <div class="CTA" style="align: center; justify-content: center;">
+                        <button class="btn solid" type="button" onClick="window.location.href='{% url 'ftp:login_user' %}';">Login here</button>
+                        <button class="btn solid" type="button" onClick="window.location.href='{% url 'ftp:resend_activation' user_id %}';">Resend link</button>
                     </div>
-                </form>
+            
+            <div class="social-media">
+              <a href="https://www.facebook.com/IRCIITKGP/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              
+              <a href="mailto:ftp.ircell@gmail.com" target="_blank" class="social-icon">
+                <i class="material-icons">email</i>
+              </a>
+              <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
+          </form>
+         
         </div>
-    </section>
-</center>
-    </main>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content" style="padding-top: 0px;">
+              <div class="imagee"><img id="imagee" src="{%static 'ftp/login/logo.png' %}"></div>
+            <h3>FOREIGN TRAINING PROGRAM</h3>
+            <p style="
+    margin-bottom: 0px;
+    font-size:1rem;
+">2021-2022</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
 {% endblock %}
