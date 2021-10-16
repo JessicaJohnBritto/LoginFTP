@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <title>{{member.name}} | Chi Squarex</title>
+    <!-- Favicons -->
+    <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'members/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'home/members_assets/css/style.css' %}" rel="stylesheet">
+
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <br><br>
+    <main id="main">
+    <section id="team" class="team">
+
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <!-- <h2>Team</h2> -->
+            <p>Our hard working team</p>
+          </header>
+  
+          <div class="row gy-4">
+            {% for member in viewmembers %}
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="member">
+                <div class="member-img">
+                  <img src="{{member.image.url}}" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="{% url 'main_app:members' member.name %}"><i class="fas fa-address-card"></i></a>
+                    <a href="{{member.facebook}}"><i class="fab fa-facebook-square"></i></a>
+                    <a href="{{member.instagram}}"><i class="fab fa-instagram"></i></a>
+                    <a href="{{member.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/91{{member.whatsapp}}"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>{{member.name}}</h4>
+                  <span>{{member.designation}}</span>
+                  <p>
+                    {{member.description}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+  
+          </div>
+        </div>
+  
+      </section><!-- End Team Section -->
+    {% endblock %}
+    {% block js %}{% endblock %}
+</main>
+</body>
+
+</html>

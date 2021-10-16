@@ -2,288 +2,125 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{% static 'ftp/ProjectsPage/css/bootstrap.min.css' %}">
-    <link rel="shortcut icon" type="image/icon" href="{% static 'ftp/ProjectsPage/img/logo/irclogo.png' %}"/>
-    <link rel="stylesheet" href="{% static 'ftp/ProjectsPage/css/slicknav.css' %}">
-    <link rel="stylesheet" href="{% static 'ftp/ProjectsPage/css/fontawesome-all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'ftp/ProjectsPage/css/style.css' %}">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'home/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
-    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap" rel="stylesheet">
-    <style type="text/css">@import url("{% static 'ftp/ProjectsPage/css/tabbed.css' %}");</style>
-    <link rel="stylesheet" type="text/css" href="{% static 'ftp/ProjectsPage/css/colors.css' %}" media="screen">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <style>
-        p
-        {
-            color:black;
-            font-weight:600;
-        }
-        .dropdown-menu
-        {
-        	padding:10px;
-        	font-size:15px;
-        	border-radius:8px;
-        	margin-top:5px;
-        	width:100%;
-        }
-        .dropdown-toggle::after
-        {
-        	content:none;
-        }
-        .dropup
-        {
-        	display:none;
-        }
-        @media (min-width: 1200px) {
-            .col-xl-10 {
-                -ms-flex: 0 0 83.333333%;
-                flex: 0 0 70%;
-                max-width: 83.333333%;
-            }
-        }
-        @media only screen and (max-width: 1500px)
-        {
-        	.dropup
-        	{
-        		display:block;
-        	}
-        }
-        body
-        {
-        	display:flex;
-        	flex-flow:column;
-        	height:100vh;
-        }
-        header
-        {
-        	flex:0 1 auto;
-        }
-        main
-        {
-        	flex:1 1 auto;
-        }
-        #ftp
-        {
-            color:whitesmoke;
-            font-size:26px;
-            margin-left:10px;
-            padding-top:10px;
-            height:100px;
-            display:inline;
-            font-weight:600;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .logo img
-        {
-            height: 50px; 
-            float:left;
-        }
-        @media screen and (max-width:600px)
-        {
-            #ftp
-            {
-                font-size:15px;
-                width:150px;
-            }
-            .logo img
-            {
-                height: 40px; 
-                margin-top:10px;
-            }
-        }
-        {% block style %}
-        {% endblock %}
-    </style>
-    {% block head %}{% endblock %}<!--Added by Praneeth-->
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    {% block head %}{% endblock %}
+
 </head>
-<body style="overflow-x:hidden;">
-    <!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text" style="padding-left: 4px; padding-bottom: 4px;"><img src="{% static 'ftp/ProjectsPage/img/logo/irclogo.png' %}">
-                </div>
-            </div>
+
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-dark">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-9 d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="/">Chi SquareX</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="{% static 'home/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/#team">Team</a></li>
+              <li><a href="/#pricing">Pricing</a></li>
+              <li class="drop-down"><a href="">Assignments</a>
+                <ul>
+                  <li><a href="#">Computer Science Assignments</a></li>
+                  <li><a href="#">Computer Science Exams</a></li>
+                  <li><a href="#">AI and ML Assignments</a></li>
+                  <li><a href="#">AI and ML Exams</a></li>
+                </ul>
+              </li>
+              <li><a href="#">AI and ML Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+
+            </ul>
+          </nav><!-- .nav-menu -->
+
+          <a href="{% url 'admin:index' %}" class="get-started-btn scrollto">Admin Page</a>
         </div>
+      </div>
+
     </div>
-    <!-- Preloader Start-->
-    <header>
-        <!-- Header Start -->
-        <div class="header-area header_area">
-            <div class="main-header" id="site-header" style="background-image: linear-gradient(0deg,#2a4ba5,#000000 100%);">
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                                <div class="logo" style="float: left;height:60px">
-                                  <a href="/" style="text-decoration:none;display:flex;"><img src="{% static 'ftp/ProjectsPage/img/logo/irclogo.png' %}" alt=""><div id="ftp">Foreign Training Program</div></a>
-                                </div>
-                            <div class="col-xl-10 col-lg-10 col-md-8" style="padding-right: 0;">
-                                <div class="header-left  d-flex f-right align-items-center">
-                                <!-- Main-menu -->
-                                    <div class="main-menu f-right d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a href="{% url 'ftp:projects' %}" class="navlink">Projects</a></li>
-                                                <li><a href="{% url 'ftp:scholarships' %}" class="navlink" id="sch">Scholarships</a>
-                                                    <!--<ul class="submenu">
-                                                        <li><a href="about.html">about</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
-                                                    </ul>-->
-                                                </li>
-                                                <li><a href="{% url 'ftp:yourapplications' %}" class="navlink">Applied Projects</a></li>
-                                                <li><a href="{% url 'ftp:yourscholarships' %}" class="navlink" id="applied_sch">Applied Scholarships</a>
-                                                    <!--<ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                    </ul>-->
-                                                </li>
-                                                <li><a href="{% url 'ftp:bookmarked' %}" class="navlink">Bookmarks</a></li>
-                                                <li><a href="{% url 'ftp:results' %}" class="navlink">Results</a></li>
-                                                <li><a href="/#contact">Contact us</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <!-- left Btn -->
-                                    <div class="header-right-btn f-right d-none d-lg-block  ml-30 dropdown">
-                                        <button href="#" class="header-btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            {% if prof.fullname %}
-                                                {{ prof.fullname|truncatewords:'1'|slice:'-1' }}
-                                            {% else %}
-                                                Profile
-                                            {% endif %}
-                                            {% if prof.photo %}
-                                                <img src="{{ prof.photo.url }}" alt="" style="height:25px;width:25px;border-radius:50%;object-fit:cover;">
-                                            {% endif %}
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        	<a class="dropdown-item" href="{% url 'ftp:view_profile' %}">Profile</a>
-                                        	<a class="dropdown-item" href="{% url 'ftp:logout_user' %}">Log Out</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
+  </header><!-- End Header -->
+
+    {% block body %}{% endblock %}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="min-height:30vh;">
+        <div class="container">
+            <h3>Chi Squarex</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
+                placeat.</p>
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
-        </div>
-    <!-- Header End -->
-    </header>
-{% block main %}
-{% endblock %}
-<footer id="contact" class="footer-1">
-        <div class="main-footer typo-light" style="
-         background-image: linear-gradient(0deg,#2a4ba5,#000000 100%);
-        border: none;        padding-top: 0px;
-        padding-bottom: 0px;
-    ">
-            <div class="foobar" style="
-            background-image: linear-gradient( 0deg,#2a4ba5,#000000 100%);
-        ">
-                <div class="row">
-
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="widget subscribe no-box">
-                            <h5 class="widget-title">International Relations Cell<div class="hor_lines"><span></span></div></h5>
-                            <p>The International Relations Cell (IRC) is a student body working under the Office of International Relations (OIR). It works to promote the exchange of students, faculties, and ideas between IIT Kharagpur and her international partners and establishing the globalization of IIT Kharagpur.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="widget no-box">
-                            <h5 class="widget-title" style="color:white;">Quick Links<div class="hor_lines"><span></span></div></h5>
-                            <ul class="thumbnail-widget">
-                                <li>
-                                    <div class="thumb-content"><a href="/#faq" style="color:white;">FAQ</a></div>
-                                </li>
-                                <li>
-                                    <div class="thumb-content"><a href="/#contact" style="color:white;">Contact Us</a></div>
-                                </li>
-                                <li>
-                                    <div class="thumb-content"><a href="/#about" style="color:white;">About</a></div>
-                                </li>
-                                 <li>
-                                    <div class="thumb-content"><a href="/notice" style="color:white;">Notice Board</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-
-                        <div class="widget no-box">
-                            <h5 class="widget-title" style="color:white;">Contact Us<div class="hor_lines"><span></span></div></h5>
-
-                            <p><a href="mailto:irc@iitkgp.ac.in" title="Mail ID IR Cell" class="mail-footer" style="color:white;">irc@iitkgp.ac.in</a></p>
-                            <ul class="social-footer2">
-                                <li class=""><a href="https://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube fa-2x" style="color:white;"></i></a></li>
-                                <li class=""><a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook fa-2x" style="color:white;"></i></a></li>
-                                <li class=""><a title="instagram" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color:white;"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>ChiSquareX</span></strong>. All Rights Reserved
             </div>
+            {% comment %} <div class="credits">
+                Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div> {% endcomment %}
         </div>
+    </footer><!-- End Footer -->
 
-       </footer>
-  <!-- Scroll Up -->
-  <!--<div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>-->
-<!-- Default dropup button -->
-<div class="btn-group dropup" style="position:fixed;bottom:18px;right:31px;height: 50px;width: 50px;z-index:3">
-  <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius:50%;width:100%;background:#28b498;color:#fff;font-size:20px;text-align:center;line-height: 48px;border: 2px solid transparent;box-shadow: 0 0 10px 3px rgba(108,98,98,0.2);padding:0">
-    {% if prof.photo %}
-        <img src="{{ prof.photo.url }}" alt="{{ prof.fullname }}" style="height:40px;width:40px;border-radius: 50%;object-fit:cover;margin-top: -4.3px;">
-    {% else %}
-        <i class="fas fa-user-circle"></i>
-    {% endif %}
-  </button>
-  <div class="dropdown-menu" style="margin-right:10px;bottom:auto">
-     <!--Dropdown menu links-->
-    <a class="dropdown-item" href="{% url 'ftp:view_profile' %}">Profile</a>
-    <a class="dropdown-item" href="{% url 'ftp:logout_user' %}">Log Out</a>
-  </div>
-</div>
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
-<!-- JS here -->
-{% block js %}
-{% endblock %}
-<script>
-$(document).ready(function() {
-    $(".navlink").each(function() {
-        if (window.location.href.indexOf(this.href)!=-1) {
-            $(this).addClass("active");
-        }
-    });
-    if($("#applied_sch").hasClass("active"))
-        $('#sch').removeClass("active");
-});
-</script>
-<!-- Popper, Bootstrap -->
-<script src="{% static 'ftp/ProjectsPage/js/popper.min.js' %}"></script>
-<script src="{% static 'ftp/ProjectsPage/js/bootstrap.min.js' %}"></script>
-<!-- Jquery Mobile Menu -->
-<script src="{% static 'ftp/ProjectsPage/js/jquery.slicknav.min.js' %}"></script>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'home/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'home/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'home/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'home/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'home/vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'home/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'home/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
 
-<script src="{% static 'ftp/ProjectsPage/js/main.js' %}"></script>
+    <!-- Template Main JS File -->
+    <script src="{% static 'home/js/main.js' %}"></script>
+
+    {% block js %}{% endblock %}
 
 </body>
+
 </html>

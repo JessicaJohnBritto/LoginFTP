@@ -1,0 +1,564 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <title>Home | Chi Squarex</title>
+  <link rel="shortcut icon" href="{% static 'home/img/chisquare.png' %}">
+  <!-- Favicons -->
+  <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!--Members grid files-->
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'home/members_assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'home/members_assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/members_assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'home/members_assets/css/style.css' %}" rel="stylesheet">
+  {% endblock %}
+
+</head>
+
+<body>
+  {% block body %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8">
+          <h1 class="main-heading">Chi SquareX</h1>
+          <a href="#about"><button class="btn btn-light">Get Started</button></a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container mt-3">
+
+        <div class="section-title">
+          <header class="section-header">
+            <p class="mb-0">About Us</p>
+          </header>
+          <p class="mt-0">
+            This is a service based company founded in 2020. We provide solutions to various corporate clients all
+            over the globe in wide range of topics like Artificial Intelligence,
+            Machine Learning, Deep Learning, AI Planning, Reinforcement Learning Web Development, Web Design. We are a
+            group of highly trained professional from IIT Kharagpur who are enthusiastic
+            about research in Artificial Intelligence and Machine Learning and willing to do corporate projects.
+            These projects are acquired through the website and other short-term and long-term contracts. We also
+            conduct independant research
+            and already have a publication at the COLING 2020 conference and other ongoing papers.
+            Our team currently consists of total of 7 members.
+          </p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        {% comment %} <div class="section-title">
+          <h2>Services</h2>
+          <!-- <p>
+            These are the list of services we provide.
+          </p> -->
+        </div> {% endcomment %}
+        <header class="section-header">
+          <p class="mb-2">Services</p>
+          <!-- <h2>These are the list of services we provide</h2> -->
+        </header>
+
+        <!--Go to this link for icon codes: https://www.pixinvent.com/demo/frest-clean-bootstrap-admin-dashboard-template/html/rtl/vertical-menu-template/icons-boxicons.html-->
+
+        <div class="row">
+          {% for service in services %}
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bx {{service.icon_code}}"></i></div>
+              <h4><a href="">{{service.title}}</a></h4>
+              <p>{{service.description}}</p>
+            </div>
+          </div>
+          {% endfor %}
+
+          {% comment %} <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Sed ut perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Dele cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">Divera don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div> {% endcomment %}
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <p>
+              In today's world, trust is a more valuable and scarce resource than a Diamond. But the only difference is
+              that once it is broken it become invaluable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Project Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        {% comment %} <div class="section-title">
+          <h2>Projects</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div> {% endcomment %}
+        <header class="section-header">
+          <h2></h2>
+          <p>Projects</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Mobile Apps</li>
+              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-ml">ML/DL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+          {% for project in projects %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{project.type_of_project}}">
+            <div class="icon-box mt-5 project-container">
+              <div class="text-center"><i class="bx {{project.bx_icon_code}} project-icon"></i></div>
+              <h4 class="project-heading">{{project.title}}</h4>
+              <p class="project-description">{{project.description}}</p>
+              <h5 class="project-member d-flex flex-row justify-content-end">- {{project.done_by}}</h5>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Project Section -->
+
+    <!-- ======= Publications Section ======= -->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <!-- <h2>Team</h2> -->
+          <p>Publications</p>
+        </header>
+
+        <div class="row">
+          <div class="col-12">
+            <h2>
+              ChiSquareX at TextGraphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation
+              Regeneration
+            </h2>
+            <p class="project-description text-left">
+              In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of
+              Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen
+              and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold
+              explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our
+              research was not funded by any organization and all the models were trained on freely available tools like
+              Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy
+              results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062
+              MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods
+              proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective,
+              improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language
+              models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among
+              others. Further optimization of our work can be done with the availability of better computational
+              resources.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://www.aclweb.org/anthology/2020.textgraphs-1.12.pdf">
+                PDF
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary js-cite-modal"
+                data-filename="/static/cite.bib" data-toggle="modal" data-target="#modal">
+                Cite
+              </button>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Code
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="http://cognitiveai.org/dist/worldtree_corpus_textgraphs2019sharedtask_withgraphvis.zip">
+                Dataset
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Project
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://drive.google.com/file/d/1r0QFrKsguBMCWPtnNYGpwD-7ron292Uw/view">
+                Poster
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.aclweb.org/anthology/2020.textgraphs-1.12/">
+                Source Document
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Publications Section -->
+
+    <div id="modal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cite</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <pre><code class="tex hljs">@inproceedings{pawate-etal-2020-chisquarex,
+        title = "{C}hi{S}quare{X} at {T}ext{G}raphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation Regeneration",
+        author = "Pawate, Aditya Girish  and
+          Madhavan, Varun  and
+          Chandak, Devansh",
+        booktitle = "Proceedings of the Graph-based Methods for Natural Language Processing (TextGraphs)",
+        month = dec,
+        year = "2020",
+        address = "Barcelona, Spain (Online)",
+        publisher = "Association for Computational Linguistics",
+        url = "https://www.aclweb.org/anthology/2020.textgraphs-1.12",
+        pages = "103--108",
+        abstract = "In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our research was not funded by any organization and all the models were trained on freely available tools like Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062 MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective, improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among others. Further optimization of our work can be done with the availability of better computational resources.",
+    }
+    </code></pre>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+              <i class="fas fa-copy"></i> Copy
+            </a>
+            <a class="btn btn-outline-primary my-1 js-download-cite" href="/static/cite.bib" target="_blank"
+              download="/static/cite.bib">
+              <i class="fas fa-download"></i> Download
+            </a>
+            <div id="modal-error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="text-center title">
+          <h3>What we have achieved so far</h3>
+        </div>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">16</span>
+            <p>Happy Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">21</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">179</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">7</span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    {% comment %}
+    {% endcomment %}
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <!-- <h2>Team</h2> -->
+          <p>Our hard working team</p>
+        </header>
+
+        <div class="row gy-4">
+          {% for member in members %}
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{member.image.url}}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="{% url 'main_app:members' member.name %}"><i class="fas fa-address-card"></i></a>
+                  <a href="{{member.facebook}}"><i class="fab fa-facebook-square"></i></a>
+                  <a href="{{member.instagram}}"><i class="fab fa-instagram"></i></a>
+                  <a href="{{member.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://wa.me/91{{member.whatsapp}}"><i class="fab fa-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{member.name}}</h4>
+                <span>{{member.designation}}</span>
+                <p>
+                  {{member.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+       <a href="{% url 'main_app:viewMembers' %}"><div class="button"><span><center>View More Members</center></span></div></a>
+      </div>
+
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= Faq Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <p>
+                If you have any more questions please feel free to email us.
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                {% comment %} <li>
+                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1">Can you provide end-to-end
+                    soltions for a project? <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
+                    <p>
+                      Yes, we can provide a full range of services from dataset generation, modelling the software and
+                      deployment of the software.
+                    </p>
+                  </div>
+                </li> {% endcomment %}
+
+
+                {% for faq in faqs %}
+                <li>
+                  <a data-toggle="collapse" href="#accordion-list-{{faq.pk}}" class="collapsed">{{faq.question}}<i
+                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-{{faq.pk}}" class="collapse" data-parent=".accordion-list">
+                    <p>
+                      {{faq.answer}}
+                    </p>
+                  </div>
+                </li>
+                {% endfor %}
+
+                {% comment %} <li>
+                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed">Dolor sit amet consectetur
+                    adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                      elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
+                      eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
+                      sed odio morbi quis
+                    </p>
+                  </div>
+                </li> {% endcomment %}
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+            style='background-image: url("/static/home/img/faq.jpg");'>&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Faq Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <!-- <div class="section-title">
+          <h2>Contact</h2>
+          <p></p>
+        </div> -->
+        <header class="section-header">
+          <p class="mb-2">Contact</p>
+          <h2></h2>
+        </header>
+      </div>
+
+      <div class="container">
+        <iframe style="border:0; width: 100%; height: 350px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14764.127284820457!2d87.30113983662179!3d22.31463626589828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d44031d91072d%3A0x750e832f90176385!2sIIT%20Kharagpur%2C%20Kharagpur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1614681728426!5m2!1sen!2sin"
+          style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <div class="container">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="ri-map-pin-line"></i>
+                <h4>Location:</h4>
+                <p>Indian Institute of Technology Kharagpur, West Bengal, India 721302</p>
+              </div>
+
+              <div class="email">
+                <i class="ri-mail-line"></i>
+                <h4>Email:</h4>
+                <p>chisquarex@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="ri-phone-line"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}
+
+  {% block js %}
+  <!--Members Grid Files-->
+  <!-- Vendor JS Files -->
+  <script src="{% static 'home/members_assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'home/members_assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'home/members_assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'home/members_assets/js/main.js' %}"></script>
+  {% endblock %}
+
+</body>
+
+</html>
