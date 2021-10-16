@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <title>{{member.name}} | Chi Squarex</title>
+    <!-- Favicons -->
+    <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'members/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'home/members_assets/css/style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    
+    {% endblock %}
+    
+</head>
+
+<body>
+    {% block body %}
+    <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+              <span class="details">Your Name</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Your E-mail</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Mobile</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Country</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Subject</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Deadline Date</span>
+              <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01" max="2100-12-31">
+
+          </div>
+
+          <div class="input-box">
+              <span class="details">Time</span>
+              <input id="appt-time" type="time" name="appt-time" value="13:30">
+          </div>
+
+          
+
+          <div class="input-box">
+              <span class="details">Other Instructions</span>
+              
+              <textarea  class="area" id="w3review" name="w3review" rows="4" cols="50"></textarea>
+
+          </div>
+
+          <div class="input-box">
+              <span class="details">Expected Price($)</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Promocode</span>
+              <input type="text" required>
+          </div>
+      <div class="divfilebox">
+          <div class="filebox ">
+              <span class="details">Attach File 1</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" required>
+          </div>
+
+          <div class="filebox ">
+              <span class="details">Attach File 2</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+        </div>
+
+        <div class="divfilebox">
+          <div class="filebox ">
+              <span class="details">Attach File 3</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+
+          <div class="filebox ">
+              <span class="details">Attach File 4</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+        </div>
+
+        <div class="button" id="email">
+            <input type="submit" onclick="send()" value="SUBMIT">
+          </div>
+      </form>
+    {% endblock %}
+    {% block js %}{% endblock %}
+</main>
+</body>
+
+</html>

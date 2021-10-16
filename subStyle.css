@@ -1,0 +1,141 @@
+*{
+    margin: 10px 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg,#71b7e6,#9b59b6);
+}
+
+.title{
+    font-family: 'Fredoka One', cursive;
+    color: #9b59b6
+}
+
+
+.container{
+    max-width: 730px;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container form .user-details{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+}
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2- 20px);
+}
+.user-details .input-box .details{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 20px;
+}
+
+.user-details .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.area{
+    height: 90px;
+    width: 120%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+
+form .user-details .filebox{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2- 20px);
+}
+.user-details .filebox .details{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 20px;
+}
+
+.user-details .filebox input{
+    height: 52px;
+    width: 95%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.divfilebox{
+    display: flex;
+}
+
+form .button{
+    height:45px;
+    width:45px 0;
+}
+form .button input{
+    margin-top: 15px;
+    height:100%;
+    width: 200%;
+    
+}
+
+
+
+
+@media (max-width:584px){
+    body{
+        height:auto;
+    }
+    .container{
+        max-width:100%;
+        
+    }
+    .title{
+        margin-top: 5%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width:100%;
+    }
+    form .user-details .filebox{
+        margin-bottom: 15px;
+        width:100%;
+    }
+    
+    
+}
+@media (max-width:700px){
+    .area{
+        width: 100%;
+    }
+}

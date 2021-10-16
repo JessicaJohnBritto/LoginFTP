@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="subStyle.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="title">SUBMIT YOUR HOMEWORK ASSIGNMENT TO GET A FREE QUOTE FROM US.</div>
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+              <span class="details">Your Name</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Your E-mail</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Mobile</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Country</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Subject</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Deadline Date</span>
+              <input type="date" id="start" name="trip-start" value="2021-01-01" min="2021-01-01" max="2100-12-31">
+
+          </div>
+
+          <div class="input-box">
+              <span class="details">Time</span>
+              <input id="appt-time" type="time" name="appt-time" value="13:30">
+          </div>
+
+          
+
+          <div class="input-box">
+              <span class="details">Other Instructions</span>
+              
+              <textarea  class="area" id="w3review" name="w3review" rows="4" cols="50"></textarea>
+
+          </div>
+
+          <div class="input-box">
+              <span class="details">Expected Price($)</span>
+              <input type="text" required>
+          </div>
+
+          <div class="input-box">
+              <span class="details">Promocode</span>
+              <input type="text" required>
+          </div>
+      <div class="divfilebox">
+          <div class="filebox ">
+              <span class="details">Attach File 1</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" required>
+          </div>
+
+          <div class="filebox ">
+              <span class="details">Attach File 2</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+        </div>
+
+        <div class="divfilebox">
+          <div class="filebox ">
+              <span class="details">Attach File 3</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+
+          <div class="filebox ">
+              <span class="details">Attach File 4</span>
+              <input type="file" name="attachFile" onblur="return chechExtension();" >
+          </div>
+        </div>
+
+        <div class="button" id="email">
+            <input type="submit" onclick="send()" value="SUBMIT">
+          </div>
+      </form>
+    </div>
+  
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,57 @@
+.main-bg-container {
+    min-height: 65vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.member-name {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.member-work-heading {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.member-work-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.member-designation {
+    font-size: 20px;
+    font-weight: 500;
+    color: #aaa4a4;
+}
+
+.member-description {}
+
+.member-info {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #444444;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.social-icon {
+    color: #aaa4a4;
+    font-size: 36px;
+    transition: color 0.5s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #444444;
+    transition: color 0.2s ease-in-out;
+}

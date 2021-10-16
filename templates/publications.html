@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <title>{{member.name}} | Chi Squarex</title>
+    <!-- Favicons -->
+    <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'members/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'home/members_assets/css/style.css' %}" rel="stylesheet">
+
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <br><br>
+    <br><br>
+    <br>
+    
+    <main id="main">
+    
+          <center><h1 style="color: #009961;font-size:3rem"><strong>Publications</strong></h1></center>
+        </header>
+        <br><br>
+        
+        <center>
+        <div class="row" style="width: 80%">
+          <div class="col-12">
+            <h2>
+              ChiSquareX at TextGraphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation
+              Regeneration
+            </h2>
+            <p class="project-description text-left">
+              In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of
+              Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen
+              and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold
+              explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our
+              research was not funded by any organization and all the models were trained on freely available tools like
+              Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy
+              results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062
+              MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods
+              proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective,
+              improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language
+              models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among
+              others. Further optimization of our work can be done with the availability of better computational
+              resources.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://www.aclweb.org/anthology/2020.textgraphs-1.12.pdf">
+                PDF
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary js-cite-modal"
+                data-filename="/static/cite.bib" data-toggle="modal" data-target="#modal">
+                Cite
+              </button>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Code
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="http://cognitiveai.org/dist/worldtree_corpus_textgraphs2019sharedtask_withgraphvis.zip">
+                Dataset
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Project
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://drive.google.com/file/d/1r0QFrKsguBMCWPtnNYGpwD-7ron292Uw/view">
+                Poster
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.aclweb.org/anthology/2020.textgraphs-1.12/">
+                Source Document
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+        <br><br>
+        <hr style="height:5px;border-width:0;color:gray;background-color:black;width:50%">
+        
+        <br><br>
+        <br><br>
+
+        <div class="row" style="width: 80%">
+          <div class="col-12">
+            <h2>
+              ChiSquareX at TextGraphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation
+              Regeneration
+            </h2>
+            <p class="project-description text-left">
+              In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of
+              Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen
+              and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold
+              explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our
+              research was not funded by any organization and all the models were trained on freely available tools like
+              Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy
+              results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062
+              MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods
+              proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective,
+              improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language
+              models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among
+              others. Further optimization of our work can be done with the availability of better computational
+              resources.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://www.aclweb.org/anthology/2020.textgraphs-1.12.pdf">
+                PDF
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary js-cite-modal"
+                data-filename="/static/cite.bib" data-toggle="modal" data-target="#modal">
+                Cite
+              </button>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Code
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="http://cognitiveai.org/dist/worldtree_corpus_textgraphs2019sharedtask_withgraphvis.zip">
+                Dataset
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Project
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://drive.google.com/file/d/1r0QFrKsguBMCWPtnNYGpwD-7ron292Uw/view">
+                Poster
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.aclweb.org/anthology/2020.textgraphs-1.12/">
+                Source Document
+              </a>
+            </div>
+          </div>
+        </div>
+        </center>
+        <br><br>
+        <br><br>
+      </div>
+        <hr style="height:5px;border-width:0;color:gray;background-color:black;width:50%">
+        
+        <br><br>
+        <br><br>
+        <center>
+        <div class="row" style="width: 80%">
+          <div class="col-12">
+            <h2>
+              ChiSquareX at TextGraphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation
+              Regeneration
+            </h2>
+            <p class="project-description text-left">
+              In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of
+              Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen
+              and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold
+              explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our
+              research was not funded by any organization and all the models were trained on freely available tools like
+              Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy
+              results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062
+              MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods
+              proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective,
+              improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language
+              models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among
+              others. Further optimization of our work can be done with the availability of better computational
+              resources.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://www.aclweb.org/anthology/2020.textgraphs-1.12.pdf">
+                PDF
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary js-cite-modal"
+                data-filename="/static/cite.bib" data-toggle="modal" data-target="#modal">
+                Cite
+              </button>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Code
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="http://cognitiveai.org/dist/worldtree_corpus_textgraphs2019sharedtask_withgraphvis.zip">
+                Dataset
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Project
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://drive.google.com/file/d/1r0QFrKsguBMCWPtnNYGpwD-7ron292Uw/view">
+                Poster
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.aclweb.org/anthology/2020.textgraphs-1.12/">
+                Source Document
+              </a>
+            </div>
+          </div>
+        </div>
+        </center>
+        <br><br>
+        <br><br>
+      </div>
+
+
+
+      <hr style="height:5px;border-width:0;color:gray;background-color:black;width:50%">
+        
+        <br><br>
+        <br><br>
+        <center>
+        <div class="row" style="width: 80%">
+          <div class="col-12">
+            <h2>
+              ChiSquareX at TextGraphs 2020 Shared Task: Leveraging Pretrained Language Models for Explanation
+              Regeneration
+            </h2>
+            <p class="project-description text-left">
+              In this work, we describe the system developed by a group of undergraduates from the Indian Institutes of
+              Technology for the Shared Task at TextGraphs-14 on Multi-Hop Inference Explanation Regeneration (Jansen
+              and Ustalov, 2020). The shared task required participants to develop methods to reconstruct gold
+              explanations for elementary science questions from the WorldTreeCorpus (Xie et al., 2020). Although our
+              research was not funded by any organization and all the models were trained on freely available tools like
+              Google Colab, which restricted our computational capabilities, we have managed to achieve noteworthy
+              results, placing ourselves in 4th place with a MAPscore of 0.49021in the evaluation leaderboard and 0.5062
+              MAPscore on the post-evaluation-phase leaderboard using RoBERTa. We incorporated some of the methods
+              proposed in the previous edition of Textgraphs-13 (Chia et al., 2019), which proved to be very effective,
+              improved upon them, and built a model on top of it using powerful state-of-the-art pre-trained language
+              models like RoBERTa (Liu et al., 2019), BART (Lewis et al., 2020), SciB-ERT (Beltagy et al., 2019) among
+              others. Further optimization of our work can be done with the availability of better computational
+              resources.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://www.aclweb.org/anthology/2020.textgraphs-1.12.pdf">
+                PDF
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary js-cite-modal"
+                data-filename="/static/cite.bib" data-toggle="modal" data-target="#modal">
+                Cite
+              </button>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Code
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="http://cognitiveai.org/dist/worldtree_corpus_textgraphs2019sharedtask_withgraphvis.zip">
+                Dataset
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://github.com/dchandak99/TextGraphs-2020">
+                Project
+              </a>
+              <a class="btn btn-sm btn-outline-primary"
+                href="https://drive.google.com/file/d/1r0QFrKsguBMCWPtnNYGpwD-7ron292Uw/view">
+                Poster
+              </a>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.aclweb.org/anthology/2020.textgraphs-1.12/">
+                Source Document
+              </a>
+            </div>
+          </div>
+        </div>
+        </center>
+        <br><br>
+        <br><br>
+      </div>
+    </section>
+    {% endblock %}
+    {% block js %}{% endblock %}
+</main>
+</body>
+
+</html>

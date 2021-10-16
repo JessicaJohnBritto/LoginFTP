@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <title>{{member.name}} | Chi Squarex</title>
+    <!-- Favicons -->
+    <link href="{% static 'home/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'members/styles.css' %}" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <div class="main-bg-container">
+        <div class="container mt-5 pt-5 pb-4">
+            <div class="row">
+                <div class="col-12 col-lg-5 d-flex flex-column">
+                    <img src="{{member.image.url}}" class="member-image" />
+                    <div class="d-flex flex-row justify-content-center mt-2">
+                        <a href="{{member.facebook}}">
+                            <i class="fab fa-facebook-square social-icon"></i>
+                        </a>
+                        <a href="{{member.instagram}}">
+                            <i class="fab fa-instagram social-icon ml-4"></i>
+                        </a>
+                        <a href="{{member.linkedin}}">
+                            <i class="fab fa-linkedin social-icon ml-4"></i>
+                        </a>
+                        <a href="https://wa.me/91{{member.whatsapp}}">
+                            <i class="fab fa-whatsapp social-icon ml-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 pt-2 member-info">
+                    <h1 class="member-name">
+                        {{member.name}}<span class="member-designation ml-3">{{member.designation}}</span>
+                    </h1>
+                    <p class="member-description">{{member.description}}</p>
+                    {% if member.project_details %}
+                    <h1 class="member-work-heading">
+                        Project Details
+                    </h1>
+                    <pre class="member-work-description">{{member.project_details}}</pre>
+                    {% endif %}
+                    {% if member.research_work %}
+                    <h1 class="member-work-heading">
+                        Research Work
+                    </h1>
+                    <p class="member-work-description">{{member.research_work}}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {% endblock %}
+    {% block js %}{% endblock %}
+</body>
+
+</html>
