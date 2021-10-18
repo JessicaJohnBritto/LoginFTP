@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <title>Home | Chi Squarex</title>
+  <link rel="shortcut icon" href="{% static 'home/img/chisquare.png' %}">
+  <!-- Favicons -->
+  <link href="{% static 'home/img/chisquare.png' %}" rel="icon">
+  <link href="{% static 'home/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!--Members grid files-->
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'home/members_assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'home/members_assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/members_assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    *{
+        margin: 10px 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'popins', sans-serif;
+    }
+    
+    
+    .title1{
+        font-family: 'Fredoka One', cursive;
+        color: black;
+    }
+    
+    
+    #c1{
+        max-width: 730px;
+        width: 100%;
+        background: white;
+        padding: 25px 30px;
+        border-radius: 10px;
+    }
+    
+    #c1 .title1{
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    #c1 #f11 .user-details{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+    }
+    
+    #f11 .user-details #ib1{
+        margin: 20px 0 12px 0;
+        width: calc(100% / 2- 20px);
+    }
+    .user-details #ib1 .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 20px;
+    }
+    
+    .user-details #ib1 input{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .area{
+        height: 90px;
+        width: 120%;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .user-details #ib1 input:focus,
+    .user-details #ib1 input:valid{
+        border-color:black;
+    }
+    
+    #f11 .user-details .filebox{
+        margin: 20px 0 12px 0;
+        width: calc(100% / 2- 20px);
+    }
+    .user-details .filebox {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 20px;
+    }
+    
+    .user-details .filebox input{
+        height: 52px;
+        width: 95%;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .divfilebox{
+        display: flex;
+    }
+    
+    #f11 .button1{
+        height:45px;
+        width:45px 0;
+    }
+    #f11 .button1 input{
+        margin-top: 15px;
+        height:100%;
+        width: 200%;
+        
+    }
+    .details{
+        text-align: initial;
+        display: block;
+        font-weight: 500;
+    }
+    
+    
+    
+    @media (max-width:584px){
+        .m1{
+            height:auto;
+        }
+        #c1{
+            max-width:100%;
+            
+        }
+        .title1{
+            margin-top: 5%;
+        }
+        #f11 .user-details #ib1{
+            margin-bottom: 15px;
+            width:100%;
+        }
+        #f11 .user-details .filebox{
+            margin-bottom: 15px;
+            width:100%;
+        }
+        
+        
+    }
+    @media (max-width:700px){
+        .area{
+            width: 100%;
+        }
+    }
+
+    header {
+        top: -50px !important;
+        height: 114px;
+    }
+  </style>
+    {% endblock %}
+
+  </head>
+ 
+
+  <body>
+    {% block body %}
+    <br><br>
+    <main id="main" class="m1">
+    <section id="team" class="team">
+<center>
+        <div class="container" id="c1">
+            <h2 style="width:75%;"><div class="title1"><strong >SUBMIT YOUR HOMEWORK ASSIGNMENT TO GET A FREE QUOTE FROM US.</strong></div></h2>
+            <form id="f11" action="#" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="user-details">
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Full Name&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="text" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" name="fname" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Email ID&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="email" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" name="mail" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Mobile&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="tel" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" name="mobile" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Country&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="text" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" name="country" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;"> Subject&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="text" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" name="subject" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Deadline Date&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="date" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" required id="start" name="trip-start" value="2021-01-01" min="2021-01-01" max="2100-12-31">
+      
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Time&nbsp;<strong style="color:red">*</strong></span>
+                    <input id="appt-time" style="border-top: none;border-right: none; border-left: none;border-radius: 0;" required type="time" name="appt-time" value="13:30">
+                </div>
+      
+               
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;"> Topic&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="text" style="border-top: none;border-right: none; border-left: none;border-radius: 0; width:19rem;text-align: initial;padding-left: 0;" name="topic" placeholder="Ex- AI and ML assignment/exam">
+                </div> 
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Other Instructions</span>
+                    
+                    <textarea  class="area" id="w3review" name="w3review" rows="4" cols="50" style="border-top: none;border-right: none; border-left: none;border-radius: 0;text-align: initial;padding-left: 0;">
+                    </textarea>
+      
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Expected Price(INR)&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="text" name="price" style="border-top: none;border-right: none; border-left: none;border-radius: 0;text-align: initial;padding-left: 0;" required>
+                </div>
+      
+                <div class="input-box" id="ib1">
+                    <span class="details" style="margin-bottom: 0;">Promocode</span>
+                    <input type="text" name="pcode" style="border-top: none;border-right: none; border-left: none;border-radius: 0;text-align: initial;padding-left: 0;">
+                </div>
+            <div class="divfilebox">
+                <div class="filebox ">
+                    <span class="details" style="margin-bottom: 0;">Attach File 1&nbsp;<strong style="color:red">*</strong></span>
+                    <input type="file" name="attachFile1" onblur="return chechExtension();" required>
+                </div>
+      
+                <div class="filebox ">
+                    <span class="details" style="margin-bottom: 0;">Attach File 2</span>
+                    <input type="file" name="attachFile2" onblur="return chechExtension();" >
+                </div>
+              </div>
+      
+              <div class="divfilebox">
+                <div class="filebox ">
+                    <span class="details" style="margin-bottom: 0;">Attach File 3</span>
+                    <input type="file" name="attachFile3" onblur="return chechExtension();" >
+                </div>
+      
+                <div class="filebox ">
+                    <span class="details"  style="margin-bottom: 0;">Attach File 4</span>
+                    <input type="file" name="attachFile4" onblur="return chechExtension();" >
+                </div>
+              </div>
+      
+              <div class="button1" id="email1">
+                  <input type="submit" id="sub1" style="border-radius: 2rem;background: #009961;color: white;border-color: white;" onclick="send()" value="SUBMIT">
+                </div>
+            </form>
+          </div>
+        </center>
+          
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+          
+  
+      </section><!-- End Team Section -->
+    {% endblock %}
+    {% block js %}{% endblock %}
+</main>
+</body>    
+</html>
